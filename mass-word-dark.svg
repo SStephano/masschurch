@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 90" role="img" aria-label="MASS">
+  <rect width="470" height="90" fill="none"/>
+  <g fill="#171817">
+    <text x="0" y="72" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="78" font-weight="900" letter-spacing="0">M</text>
+    <polygon points="118,74 167,14 216,74 188,74 167,47 146,74"/>
+    <text x="202" y="72" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="78" font-weight="900" letter-spacing="0">SS</text>
+  </g>
+</svg>

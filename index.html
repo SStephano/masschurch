@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fffdf9" />
+  <meta name="description" content="MASS Church is a new church community forming in Summerlin, Las Vegas. Faith. People. Purpose." />
+  <title>MASS Church — More Than a Gathering</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fffdf9;
+      --ink:#171816;
+      --ink-soft:#5b584f;
+      --gold:#b58b4d;
+      --gold-soft:#eadbbd;
+      --line:#eadfce;
+      --card:#f5f0e8;
+      --dark:#191a17;
+      --dark-2:#232420;
+      --white:#fffdf9;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .wrap{width:min(1180px,calc(100% - 72px));margin:0 auto}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 20%, #f4e7d0 0%, #fffaf2 34%, #fffdf9 72%);border-bottom:1px solid var(--line)}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+    .hero:before{width:620px;height:620px;right:-160px;top:70px;border:1px solid rgba(181,139,77,.22);box-shadow:0 0 0 110px rgba(181,139,77,.07),0 0 0 220px rgba(181,139,77,.04)}
+    .hero:after{width:260px;height:260px;right:170px;top:180px;background:radial-gradient(circle, rgba(181,139,77,.18) 0%, rgba(181,139,77,0) 72%)}
+    .topbar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0}
+    .brand img{width:min(330px,56vw);height:auto}
+    .nav{display:flex;align-items:center;gap:28px;color:#3f3a31;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .nav a:hover{color:var(--gold)}
+    .nav .cta{padding:14px 20px;border:1px solid #d9c5a1;background:rgba(255,255,255,.72);border-radius:999px}
+    .heroInner{position:relative;z-index:2;padding:54px 0 110px;max-width:760px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700;color:#9a7335}
+    h1,h2,h3{font-family:'Manrope',Arial,sans-serif;color:var(--ink);margin:0}
+    h1{font-size:clamp(52px,8vw,96px);line-height:.97;letter-spacing:-.065em;margin:16px 0 20px}
+    h2{font-size:clamp(34px,4.3vw,56px);line-height:1.06;letter-spacing:-.05em}
+    .lead{font-size:18px;line-height:1.84;color:var(--ink-soft);max-width:640px;margin:0 0 34px}
+    .buttonRow{display:flex;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.05em}
+    .btnPrimary{background:var(--ink);color:var(--white)}
+    .btnPrimary:hover{background:#2b2d29}
+    .btnSecondary{border:1px solid #d8c29a;background:#fff;color:var(--ink)}
+    section{padding:96px 0}
+    .intro{text-align:center;padding-bottom:28px}
+    .intro p{max-width:760px;margin:18px auto 0;color:var(--ink-soft);line-height:1.9;font-size:17px}
+    .cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .coreCard{background:var(--card);border-radius:22px;padding:34px 30px 32px;border-top:3px solid var(--gold);box-shadow:0 14px 34px rgba(15,15,15,.04)}
+    .smallLabel{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#9e7a45}
+    .coreCard h3{font-size:34px;letter-spacing:-.045em;margin:18px 0 12px}
+    .coreCard p{margin:0;color:#6d695f;line-height:1.85}
+    .experience{background:linear-gradient(180deg,var(--dark),var(--dark-2));color:#fff;position:relative;overflow:hidden}
+    .experience:before{content:"";position:absolute;inset:auto auto -120px -120px;width:340px;height:340px;border-radius:50%;border:1px solid rgba(255,255,255,.08);box-shadow:0 0 0 70px rgba(255,255,255,.03),0 0 0 140px rgba(255,255,255,.015)}
+    .experience .wrap{position:relative;z-index:1}
+    .experience .eyebrow{color:#d4ae6c}
+    .experience h2,.experience h3{color:#fff}
+    .experienceIntro{text-align:center;margin-bottom:42px}
+    .experienceIntro p{max-width:760px;margin:16px auto 0;color:#c8c4bb;line-height:1.84}
+    .wayCard{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:30px 28px 28px;min-height:292px;display:flex;flex-direction:column;box-shadow:0 18px 48px rgba(0,0,0,.18)}
+    .wayCard p{margin:14px 0 0;color:#ccc8bf;line-height:1.84}
+    .wayCard a{margin-top:auto;padding-top:20px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#f0cf97}
+    .massHeading{font-family:'Manrope',Arial,sans-serif;font-size:clamp(22px,2.05vw,29px);font-weight:800;line-height:1.24;letter-spacing:-.045em;margin:24px 0 12px;color:#fff;overflow-wrap:normal}
+    .massHeading .massName{white-space:nowrap}
+    .launchGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+    .showcase{background:linear-gradient(180deg,#f8f3ea,#f4ecdd);border:1px solid var(--line);border-radius:26px;min-height:370px;padding:36px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .showcase:before,.showcase:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(181,139,77,.18)}
+    .showcase:before{width:420px;height:420px}
+    .showcase:after{width:300px;height:300px}
+    .showcase img{position:relative;z-index:1;width:min(100%,520px)}
+    .join{text-align:center;padding-top:78px}
+    .join p{max-width:720px;margin:18px auto 30px;color:var(--ink-soft);line-height:1.84}
+    .footer{background:#121310;color:#c8c4ba;padding:28px 0}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:13px}
+    @media (max-width: 980px){
+      .wrap{width:min(100% - 40px,1180px)}
+      .cards3,.launchGrid{grid-template-columns:1fr}
+      .topbar{flex-direction:column;align-items:flex-start}
+      .nav{flex-wrap:wrap;gap:16px 18px}
+      .heroInner{padding:34px 0 82px}
+      .showcase{min-height:280px}
+      .foot{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width: 560px){
+      .brand img{width:250px}
+      .nav{font-size:12px}
+      .nav .cta{padding:12px 16px}
+      .buttonRow{flex-direction:column}
+      .btn{width:100%}
+      .massHeading{font-size:clamp(22px,6vw,28px)}
+      .hero:before{right:-240px;top:110px}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="#home" aria-label="MASS Church home"><img src="mass-logo-horizontal.png" alt="MASS Church logo"></a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#experience">The MASS Experience</a>
+          <a href="#join" class="cta">Get Connected</a>
+        </nav>
+      </div>
+      <div class="heroInner">
+        <div class="eyebrow">A new community in Summerlin</div>
+        <h1>More than<br>a gathering.</h1>
+        <p class="lead">MASS Church is a place to explore faith, build real community, and live with purpose. Honest questions are welcome. Real conversation is welcome. You are welcome.</p>
+        <div class="buttonRow">
+          <a class="btn btnPrimary" href="#join">Be Part of the Beginning</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="experience" id="experience">
+      <div class="wrap">
+        <div class="experienceIntro">
+          <div class="eyebrow">The MASS experience</div>
+          <h2>Three ways to come together.</h2>
+          <p>Join us through meaningful gatherings, authentic conversations, and prayer.</p>
+        </div>
+        <div class="cards3">
+          <article class="wayCard">
+            <div class="smallLabel">01 / Come together</div>
+            <h3 class="massHeading"><span class="massName">MASS</span> Gatherings.</h3>
+            <p>Meaningful meetups and shared experiences that bring people together in a welcoming, modern church community.</p>
+            <a href="#join">Explore Gatherings ↗</a>
+          </article>
+          <article class="wayCard">
+            <div class="smallLabel">02 / Go deeper</div>
+            <h3 class="massHeading"><span class="massName">MASS</span> Conversations.</h3>
+            <p>Open, thoughtful discussions about Jesus, life, purpose, and the questions that matter most.</p>
+            <a href="#join">Join the Conversation ↗</a>
+          </article>
+          <article class="wayCard">
+            <div class="smallLabel">03 / Lift each other up</div>
+            <h3 class="massHeading"><span class="massName">MASS</span> Prayers.</h3>
+            <p>Making space to pray, reflect, encourage one another, and seek God together wherever people are in their journey.</p>
+            <a href="#join">Share a Prayer Request ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro wrap" id="about">
+      <div class="eyebrow">What we're about</div>
+      <h2>Faith. People. Purpose.</h2>
+      <p>Church is more than a building or a weekly service. It is people walking through life together, growing in faith, and showing up for one another. MASS Church is being built around Jesus, authentic community, and a shared purpose in the city.</p>
+    </section>
+
+    <section class="wrap" style="padding-top:0">
+      <div class="cards3">
+        <article class="coreCard">
+          <div class="smallLabel">01 / Our foundation</div>
+          <h3>Faith.</h3>
+          <p>Getting to know Jesus, asking honest questions, and discovering a faith that matters in everyday life.</p>
+        </article>
+        <article class="coreCard">
+          <div class="smallLabel">02 / Our community</div>
+          <h3>People.</h3>
+          <p>Building genuine relationships, opening the door wide, and creating a place where people feel welcome and known.</p>
+        </article>
+        <article class="coreCard">
+          <div class="smallLabel">03 / Our calling</div>
+          <h3>Purpose.</h3>
+          <p>Living beyond ourselves by serving others, loving our city, and making a meaningful impact together.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="wrap">
+      <div class="launchGrid">
+        <div>
+          <div class="eyebrow">Launching in Las Vegas</div>
+          <h2>Starting simple.<br>Building something real.</h2>
+          <p class="lead" style="max-width:none;margin:18px 0 0">We’re beginning with gatherings, conversations, and prayer as the first expression of MASS Church. This page is now cleaner, more polished, and ready to publish while the community continues taking shape.</p>
+        </div>
+        <div class="showcase">
+          <img src="mass-logo-horizontal.png" alt="MASS Church horizontal logo">
+        </div>
+      </div>
+    </section>
+
+    <section class="join wrap" id="join">
+      <div class="eyebrow">Be part of the beginning</div>
+      <h2>There’s a place for you here.</h2>
+      <p>If you want to hear about the first MASS Gatherings, help build the community, or stay updated as things launch, reach out and connect.</p>
+      <div class="buttonRow" style="justify-content:center">
+        <a class="btn btnPrimary" href="mailto:hello@masschurch.com?subject=I%27m%20interested%20in%20MASS%20Church">I’m Interested</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <div>© <span id="year">2026</span> MASS Church</div>
+      <div>Faith. People. Purpose.</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
